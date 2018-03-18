@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+             .li{
+	list-style-type: none;
+	border-bottom: 1px dotted #000;	
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+}
+            </style>
+    </head>
+    <body>
+
+        <h1>hey!! this is the results page ........</h1>
+        <% if(data.Response === 'True') { %>
+             <ul>
+              <%data["Search"].forEach((movie)=>{ %>
+              <li id="li"><%= movie["Title"]%>-- <%=movie["Year"]%></li>
+              <% }) %>
+           </ul>
+           <% } else { %>
+            <p> <%= data.Error %> </p>
+            <% } %>
+
+<br>
+<br>
+<form action="/" method="GET">
+
+    <button>return</button>
+
+</form>
+    </body>
+</html>
+
