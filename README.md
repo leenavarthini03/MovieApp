@@ -1,1 +1,3 @@
 # MovieApp
+
+## This App is designed to get movie details using a Movie API.........
